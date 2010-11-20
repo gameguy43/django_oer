@@ -21,7 +21,10 @@ def index(request):
     return render_to_response('index.html')
 
 def about(request):
-    return render_to_response('index.html')
+    return render_to_response('about.html')
+
+def tedx(request):
+    return render_to_response('tedx.html')
 
 def view_random(request):
     highest_image_pk = 12049

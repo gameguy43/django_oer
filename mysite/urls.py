@@ -18,9 +18,9 @@ urlpatterns = patterns('',
 
     (r'^$', 'mysite.mainapp.views.index'),
     (r'^about$', 'mysite.mainapp.views.about'),
+    (r'^tedx$', 'mysite.mainapp.views.tedx'),
+    (r'^cs5$', 'mysite.mainapp.views.cs5'),
     
-    (r'^view_random$', 'mysite.mainapp.views.view_random'),
-
     (r'^view/(?P<image__pk>\d+)$', 'mysite.mainapp.views.view_image'),
 
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',

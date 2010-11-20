@@ -5,7 +5,7 @@ TEMPLATE_DEBUG = DEBUG
 
 
 # path to here, including the mysite dir at the end. with trailing slash
-ABS_PATH_TO_THIS_REPO = '/home/pyrak/workspace/rod/publish_cdc_phil_django/mysite/'
+ABS_PATH_TO_THIS_REPO = '/home/pyrak/workspace/ocw/mysite/'
 
 DATA_ROOT = ABS_PATH_TO_THIS_REPO + 'static/data/'
 
