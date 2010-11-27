@@ -29,7 +29,7 @@ small {font-size:10px;color:#ccc; padding:10px 8px 5px 0px;float:left;text-trans
 #content-onecol.homepage .big_homepage_links a{ font-size: 1.4em; margin-right: 30px; margin-bottom: 10px; }
 #content-onecol.homepage .big_homepage_links span{ display: block;}
 #content-onecol.homepage p.big_homepage_links {margin: 0 0 35px 0; padding-left: 15px; border-left: 1px solid #efefef}
-p {color:#555}
+/* p {color:#555} */
 hr {margin:0; clear:both}
 
 /* HEADER */
@@ -209,7 +209,13 @@ ol.commentlist li.thread-odd {}
 }
 #content-onecol #desc{
     margin: 0 0px 10px 0px;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    background-color: #ededed;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #2e2e2e;
 }
 #content-onecol #not_desc{
     margin: 20px 30px 0 30px;
@@ -229,11 +235,26 @@ ol.commentlist li.thread-odd {}
     color: black;
 }
 .front_page_item{
-    display: block;
     text-align: center;
     margin: 10px 10px 20px 10px;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px dotted #ededed;
 }
 .front_page_item .title{
+    font-size: 1.3em;
+    text-align: left;
+    margin: 0 0 0 20px;
+}
+.front_page_item .title a{
+    color: #1f1f1f;
 }
 
+.more_links{
+    margin: 10px;
+    text-align: right;
+
+}
 
