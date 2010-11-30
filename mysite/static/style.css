@@ -195,8 +195,13 @@ ol.commentlist li.thread-odd {}
 
 
 
-#content-onecol {
-    margin: 10px 200px 0 10px;
+#content-twocol{
+    margin: 30px 250px 0 10px;
+    padding-bottom: 20px;
+    font-size: .8em;
+}
+#content-onecol{
+    margin: 30px 10px 0 10px;
     padding-bottom: 20px;
     font-size: .8em;
 }
@@ -204,6 +209,8 @@ ol.commentlist li.thread-odd {}
     width: 200px;
     float: right;
     text-align: left;
+    clear: both;
+    margin: 10px auto auto auto; 
 }
 #sidebar li{
     font-size: .9em;
@@ -216,7 +223,7 @@ ol.commentlist li.thread-odd {}
     margin-left: 20px;
     margin-bottom: 10px;
 }
-#content-onecol .mini_desc{
+#content-twocol .mini_desc{
     margin: 5px;
     text-align: left;
 }
