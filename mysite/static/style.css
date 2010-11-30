@@ -15,12 +15,12 @@ http://www.opensource.org/licenses/gpl-license.php
 @import url("/static/css/text.css");
 @import url("/static/css/960.css");
 
-body {font-size: 18px;font-family: Georgia}
+body {font-size: 18px;font-family: Arial}
 h1,h2,h3,h4 {letter-spacing:-1px}
 h1,h2,h3,h4,#nav,small,.postmetadata, .small{font-family: Helvetica, Arial;}
 h2 {margin: 0 0 10px 10px;padding: 0;color:#666;}
 h3 {margin: 0 0 20px 0;padding: 0;color:#666; font-size: 1.2em; }
-a {color:#999;text-decoration: none;border-bottom: 1px solid #eee}
+a {color:#2e2e2e;text-decoration: none;border-bottom: 1px solid #eee}
 a:hover {color:#000;border-bottom:1px solid #ccc}
 h2 a { color:#000;text-decoration: none;font-size: 30px; border:none}
 h2 a:hover, #header h1 a:hover { color:#c00;border:none}
@@ -196,9 +196,18 @@ ol.commentlist li.thread-odd {}
 
 
 #content-onecol {
-    margin: 10px 10px 0 10px;
+    margin: 10px 200px 0 10px;
     padding-bottom: 20px;
     font-size: .8em;
+}
+#sidebar{
+    width: 200px;
+    float: right;
+    text-align: left;
+}
+#sidebar li{
+    font-size: .9em;
+
 }
 #content-onecol .post {clear:both}
 #content-onecol .page {clear:both}
@@ -207,10 +216,14 @@ ol.commentlist li.thread-odd {}
     margin-left: 20px;
     margin-bottom: 10px;
 }
+#content-onecol .mini_desc{
+    margin: 5px;
+    text-align: left;
+}
 #content-onecol #desc{
     margin: 0 0px 10px 0px;
     font-size: 1.1em;
-    background-color: #ededed;
+    background-color: #f5f5f5;
     padding: 10px 20px 10px 20px;
     margin: 10px;
     border-radius: 5px;
@@ -218,6 +231,7 @@ ol.commentlist li.thread-odd {}
     color: #2e2e2e;
 }
 #content-onecol #not_desc{
+    font-size: .8em;
     margin: 20px 30px 0 30px;
     /*border-left: 1px grey solid;
     padding-left: 5px;*/
@@ -244,9 +258,9 @@ ol.commentlist li.thread-odd {}
     border-bottom: 1px dotted #ededed;
 }
 .front_page_item .title{
-    font-size: 1.3em;
+    font-size: 1.5em;
     text-align: left;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 0px;
 }
 .front_page_item .title a{
     color: #1f1f1f;
@@ -255,6 +269,7 @@ ol.commentlist li.thread-odd {}
 .more_links{
     margin: 10px;
     text-align: right;
+    font-size: .85em;
 
 }
 

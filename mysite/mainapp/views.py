@@ -29,6 +29,9 @@ def tedx(request):
 def cs5(request):
     return render_to_response('cs5.html')
 
+def artistryof(request):
+    return render_to_response('artistryof.html')
+
 def view_random(request):
     highest_image_pk = 12049
     # TODO: actually write code to figure out the above

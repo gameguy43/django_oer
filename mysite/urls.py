@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     (r'^about$', 'mysite.mainapp.views.about'),
     (r'^tedx$', 'mysite.mainapp.views.tedx'),
     (r'^cs5$', 'mysite.mainapp.views.cs5'),
+    (r'^artistryof$', 'mysite.mainapp.views.artistryof'),
     
     (r'^view/(?P<image__pk>\d+)$', 'mysite.mainapp.views.view_image'),
 
