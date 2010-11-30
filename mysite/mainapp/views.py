@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 #from mysite.mainapp.models 
 import datetime
-import sqlalchemy
 import json
 
 from django.conf import settings
