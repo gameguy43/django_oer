@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+
+
+{% block main %}
+
+
+	<div class="homepage" id="content-onecol"> 
+ 
+	
+		
+<!--
+				<h2><a href="http://cdc-phil.releaseourdata.com/?page_id=235" rel="bookmark" title="Permanent Link to "></a></h2>
+--> 
+				
+				
+ 
+				<div class="entry"> 
+					
+ 
+ 
+<div style="text-align: center; width: 100%; display: block;"> 
+{{ thing.widget|safe }}
+</div> 
+    <p> 
+
+<div id="desc"> 
+    <p>
+    {{ thing.description|safe }}
+    </p>
+    <p>
+    <a href="http://www.dartmouth.edu/~tedx/multimedia/">TEDxDartmouth website &raquo;</a>
+    </p>
+</div> 
+ 
+	
+
+
+{% endblock %}

@@ -6,15 +6,18 @@ from django.core.urlresolvers import reverse
 #from mysite.mainapp.models 
 import datetime
 import json
+import mysite.mainapp.models
 
 from django.conf import settings
 
 import random
 
 
-def get_metadata_db_connection():
-    return sqlalchemy.create_engine(settings.METADATA_ENGINE)
-
+def view_thing(request, thing__pk):
+    thing = mysite.mainapp.models.Thing.objects.get(pk=thing__pk)
+    data = {'thing': thing}
+    return render_to_response('view_thing.html', data)
+    
 
 def index(request):
     return render_to_response('index.html')
