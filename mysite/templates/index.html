@@ -31,6 +31,7 @@
 
 
 {% for thing in things %}
+{% if not thing.hide %}
 
 <span class="front_page_item">
 <p class="title">
@@ -53,6 +54,7 @@
 </ul>
 </span>
 
+{% endif %}
 {% endfor %}
  
 <!--
