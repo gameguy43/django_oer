@@ -30,17 +30,18 @@
     <div class="homepage" id="content-twocol"> 
 
 
+{% for thing in things %}
 
 <span class="front_page_item">
 <p class="title">
-<a href="/tedx">TEDxDartmouth</a>
+<a href="/view/{{thing.pk}}">{{thing.title}}</a>
 </p>
-<a href="/tedx">
-<img src="http://farm5.static.flickr.com/4019/4543216579_972e3eae6d.jpg"></img>
+<a href="/view/{{thing.pk}}">
+<img src="{{thing.big_image}}"></img>
 </a>
 <p class="mini_desc">
-TEDxDartmouh was a student-organized faculty lecture series that brought together the brightests Dartmouth faculty and students in the spirit of "ideas worth sharing."
-<a href="/tedx"> More &raquo;</a>
+{{thing.mini_desc}}
+<a href="/view/{{thing.pk}}"> More &raquo;</a>
 </p>
 <ul class="more_links">
 <li>
@@ -51,47 +52,8 @@ TEDxDartmouh was a student-organized faculty lecture series that brought togethe
 </li>
 </ul>
 </span>
- 
-<span class="front_page_item">
-<p class="title">
-<a href="/cs5">Introduction to Computer Science</a>
-</p>
-<a href="/cs5">
-<img src="http://www.cs.dartmouth.edu/~cs5/lectures/1119/qsort-worst-case.gif"></img>
-</a>
-<!--
-http://www.cs.dartmouth.edu/~cs5/lectures/1111/states-DLL.gif
--->
-<p class="mini_desc">
-    Originally written by professor Tom Cormen, the detailed lecture notes for Introduction to Computer Science have been built on and perfected by various other Computer Science professors who have taught the course over the years. 
-<a href="/cs5"> More &raquo;</a>
-</p>
-<ul class="more_links">
-<li>
-<a href="">More courses &raquo;</a>
-</li>
-</ul>
 
-</span>
-
-<span class="front_page_item">
-<p class="title">
-<a href="/artistryof">The Artistry of the Homeric Simile</a>
-</p>
-<a href="/artistryof">
-<img style="border:2px solid #E5E5E5; border-radius:2px; -moz-border-radius:2px;" src="/static/img/artistryof_cropt.jpg"></img>
-</a>
-<p class="mini_desc">
-    This book published in 2009 by classics professor William Scott is available for free online courtesy of the Dartmouth library. 
-<a href="/artistryof"> More &raquo;</a>
-</p>
-<ul class="more_links">
-<li>
-<a href="">More faulty publications &raquo;</a>
-</li>
-</ul>
-
-</span>
+{% endfor %}
  
 <!--
 <p class="big_homepage_links"> 

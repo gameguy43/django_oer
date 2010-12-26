@@ -1,19 +1,21 @@
-from django.db import models
+schema:
 
-class Tag(models.Model):
-    machine_name = models.CharField(max_length=30)
-    human_name = models.CharField(max_length=30)
-    def __unicode__(self):
-        return self.human_name
-
-class Thing(models.Model):
     title = models.CharField(max_length=300)
     description = models.CharField(max_length=3000)
     mini_desc = models.CharField(max_length=3000)
     widget = models.CharField(max_length=10000)
-    big_image = models.CharField(max_length=10000)
+    big_image = models.CharField(max_length=300)
     tags = models.ManyToManyField(Tag, verbose_name="list of tags")
     karma = models.IntegerField()
     def __unicode__(self):
         return self.title
+
+
+some have a main link to somewhere else
+
+we want to host somecollections, i think
+    like the collection of books
+
+
+
 
