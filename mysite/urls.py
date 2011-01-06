@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     (r'^artistryof$', 'mysite.mainapp.views.artistryof'),
     
     (r'^view/(?P<thing__pk>\d+)$', 'mysite.mainapp.views.view_thing'),
+    (r'^tag/(?P<tag__pk>\d+)$', 'mysite.mainapp.views.view_tag'),
 
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
                 {'document_root': settings.STATIC_DOC_ROOT, 'show_indexes': True}),
