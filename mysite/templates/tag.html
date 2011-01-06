@@ -1,0 +1,60 @@
+{% extends "main.html" %} 
+
+{% block main %}
+
+<div id="sidebar">
+    Categories:
+    <ul>
+    {% for tag in tags %}
+        <li>
+        <a href="/tag/{{tag.pk}}">
+            {{tag.human_name}}
+        </a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+    <div class="homepage" id="content-twocol"> 
+
+
+{% for thing in things %}
+{% if not thing.hide %}
+
+<span class="front_page_item">
+<p class="title">
+<a href="/view/{{thing.pk}}">{{thing.title}}</a>
+</p>
+<a href="/view/{{thing.pk}}">
+<img src="{{thing.big_image}}"></img>
+</a>
+<p class="mini_desc">
+{{thing.mini_desc}}
+<a href="/view/{{thing.pk}}"> More &raquo;</a>
+</p>
+<ul class="more_links">
+{% for tag in thing.tags.all %}
+<li>
+<a href="/tag/{{tag.pk}}">More {{tag.human_name}}&raquo;</a>
+</li>
+<li>
+{% endfor %}
+</ul>
+</span>
+
+{% endif %}
+{% endfor %}
+ 
+<!--
+<p class="big_homepage_links"> 
+<span> 
+    <a href="/view_random">View a random image &raquo;</a> 
+</span> 
+</p> 
+-->
+ 
+<p> 
+</p>
+
+
+</div>
+{% endblock %}
