@@ -1,5 +1,6 @@
 #! /bin/sh
+# doesn't quite work yet--need to secretly but automatically pass the password. maybe through .my.cnf
 
-scp mysite/site_database.sqlite3 parkcity:/tmp/
-ssh parkcity 'ls ~/webs/ocw-dartmouth-site/mysite/; mv /tmp/site_database.sqlite3 ~/webs/ocw-dartmouth-site/mysite/'
+mysqldump -u ocw_dartmouth -p ocw_dartmouth > thedump.mysql && gzip thedump.mysql && scp thedump.mysql.gz parkcity:/tmp && ssh parkcity "zcat /tmp/thedump.mysql.gz | mysql -uocw_dartmouth -p ocw_dartmouth"
+mv thedump.mysql.gz /tmp/
 
