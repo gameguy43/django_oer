@@ -11,8 +11,8 @@ class Migration(SchemaMigration):
         # Adding model 'Tag'
         db.create_table('mainapp_tag', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('machine_name', self.gf('django.db.models.fields.CharField')(max_length=30)),
-            ('human_name', self.gf('django.db.models.fields.CharField')(max_length=30)),
+            ('machine_name', self.gf('django.db.models.fields.CharField')(max_length=300)),
+            ('human_name', self.gf('django.db.models.fields.CharField')(max_length=300)),
         ))
         db.send_create_signal('mainapp', ['Tag'])
 
@@ -20,11 +20,12 @@ class Migration(SchemaMigration):
         db.create_table('mainapp_thing', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=300)),
-            ('description', self.gf('django.db.models.fields.CharField')(max_length=3000)),
-            ('mini_desc', self.gf('django.db.models.fields.CharField')(max_length=3000)),
-            ('widget', self.gf('django.db.models.fields.CharField')(max_length=10000)),
-            ('big_image', self.gf('django.db.models.fields.CharField')(max_length=300)),
-            ('karma', self.gf('django.db.models.fields.IntegerField')()),
+            ('description', self.gf('django.db.models.fields.TextField')(max_length=3000)),
+            ('mini_desc', self.gf('django.db.models.fields.TextField')(max_length=3000)),
+            ('widget', self.gf('django.db.models.fields.TextField')(max_length=10000)),
+            ('big_image', self.gf('django.db.models.fields.CharField')(max_length=10000)),
+            ('karma', self.gf('django.db.models.fields.IntegerField')(default=1, null=True)),
+            ('hide', self.gf('django.db.models.fields.BooleanField')(default=False)),
         ))
         db.send_create_signal('mainapp', ['Thing'])
 
@@ -52,20 +53,21 @@ class Migration(SchemaMigration):
     models = {
         'mainapp.tag': {
             'Meta': {'object_name': 'Tag'},
-            'human_name': ('django.db.models.fields.CharField', [], {'max_length': '30'}),
+            'human_name': ('django.db.models.fields.CharField', [], {'max_length': '300'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'machine_name': ('django.db.models.fields.CharField', [], {'max_length': '30'})
+            'machine_name': ('django.db.models.fields.CharField', [], {'max_length': '300'})
         },
         'mainapp.thing': {
             'Meta': {'object_name': 'Thing'},
-            'big_image': ('django.db.models.fields.CharField', [], {'max_length': '300'}),
-            'description': ('django.db.models.fields.CharField', [], {'max_length': '3000'}),
+            'big_image': ('django.db.models.fields.CharField', [], {'max_length': '10000'}),
+            'description': ('django.db.models.fields.TextField', [], {'max_length': '3000'}),
+            'hide': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'karma': ('django.db.models.fields.IntegerField', [], {}),
-            'mini_desc': ('django.db.models.fields.CharField', [], {'max_length': '3000'}),
-            'tags': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['mainapp.Tag']"}),
+            'karma': ('django.db.models.fields.IntegerField', [], {'default': '1', 'null': 'True'}),
+            'mini_desc': ('django.db.models.fields.TextField', [], {'max_length': '3000'}),
+            'tags': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['mainapp.Tag']", 'null': 'True'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '300'}),
-            'widget': ('django.db.models.fields.CharField', [], {'max_length': '10000'})
+            'widget': ('django.db.models.fields.TextField', [], {'max_length': '10000'})
         }
     }
 

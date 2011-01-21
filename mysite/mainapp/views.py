@@ -20,7 +20,7 @@ def view_thing(request, thing__pk):
     
 
 def index(request):
-    things = mysite.mainapp.models.Thing.objects.order_by('karma')[0:5]
+    things = mysite.mainapp.models.Thing.objects.order_by('karma').reverse()[0:5]
     tags = mysite.mainapp.models.Tag.objects.all()[0:5]
     data = {'things': things, 'tags': tags}
     return render_to_response('index.html', data)
