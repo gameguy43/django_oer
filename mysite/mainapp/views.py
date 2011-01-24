@@ -20,15 +20,18 @@ def view_thing(request, thing__pk):
     
 
 def index(request):
-    things = mysite.mainapp.models.Thing.objects.order_by('karma').reverse()[0:5]
-    tags = mysite.mainapp.models.Tag.objects.all()[0:5]
+    things = mysite.mainapp.models.Thing.objects.order_by('karma').reverse()
+    tags = mysite.mainapp.models.Tag.objects.all()
+    #things = mysite.mainapp.models.Thing.objects.order_by('karma').reverse()[0:5]
+    #tags = mysite.mainapp.models.Tag.objects.all()[0:5]
     data = {'things': things, 'tags': tags}
     return render_to_response('index.html', data)
 
 def view_tag(request, tag__pk):
     tag = mysite.mainapp.models.Tag.objects.get(pk=tag__pk)
     things = mysite.mainapp.models.Thing.objects.filter(tags=tag)
-    tags = mysite.mainapp.models.Tag.objects.all()[0:5]
+    #tags = mysite.mainapp.models.Tag.objects.all()[0:5]
+    tags = mysite.mainapp.models.Tag.objects.all()
     data = {'things': things, 'tag': tag, 'tags':tags}
     return render_to_response('tag.html', data)
 
