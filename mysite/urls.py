@@ -18,10 +18,7 @@ urlpatterns = patterns('',
 
     (r'^$', 'mysite.mainapp.views.index'),
     (r'^about$', 'mysite.mainapp.views.about'),
-    (r'^tedx$', 'mysite.mainapp.views.tedx'),
-    (r'^cs5$', 'mysite.mainapp.views.cs5'),
-    (r'^artistryof$', 'mysite.mainapp.views.artistryof'),
-    
+    (r'^everything$', 'mysite.mainapp.views.everything'),
     (r'^view/(?P<thing__pk>\d+)$', 'mysite.mainapp.views.view_thing'),
     (r'^tag/(?P<tag__pk>\d+)$', 'mysite.mainapp.views.view_tag'),
 

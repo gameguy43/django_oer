@@ -3,6 +3,7 @@ from django.db import models
 class Tag(models.Model):
     machine_name = models.CharField(max_length=300)
     human_name = models.CharField(max_length=300)
+    frontpageable = models.BooleanField(null=False)
     def __unicode__(self):
         return self.human_name
 
@@ -15,6 +16,7 @@ class Thing(models.Model):
     karma = models.IntegerField(null=True, default=1)
     hide = models.BooleanField(null=False)
     tags = models.ManyToManyField(Tag, verbose_name="list of tags", null=True)
+    frontpageable = models.BooleanField(null=False)
     def __unicode__(self):
         return self.title
 
