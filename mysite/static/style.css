@@ -15,14 +15,38 @@ http://www.opensource.org/licenses/gpl-license.php
 @import url("/static/css/text.css");
 @import url("/static/css/960.css");
 
+.container_960{
+    background-color: white;
+}
+
+#view_everything{
+    border-bottom: 0px;
+
+}
+
+html{
+    background-color: #CDC673;
+}
+
 body {
     font-size: 18px;
     font-family: Arial;
+    background-color: white;
 }
 #header{
     padding: 0 10px 10px 10px;
     border-bottom: 1px solid #003300;
+    background-color: #CDC673;
 }
+#footer{
+    display: block;
+    width: 100%;
+    padding: 0 10px 10px 0;
+    margin: 0;
+    border-top: 1px solid #003300;
+    background-color: #CDC673;
+}
+
 
 #header h1 {font-size:40px;padding:0;margin:5px 0 0 0;float:left;}
 #header h1 a{
@@ -61,7 +85,6 @@ hr {margin:0; clear:both}
 
 /* HEADER */
 #header{
-    background-color: #CDC673;
 }
 #header h1 a:last-letter {color:#c00;}
 #header span {font:13px Georgia; font-style: italic; color: #aaa; margin-left:20px;position:relative;top:-7px;letter-spacing: 0}
@@ -99,7 +122,6 @@ hr {margin:0; clear:both}
 #sidebar {font-size:16px;}
 #sidebar ul {list-style: none;}
 #sidebar ul li ul li {margin:0}
-#sidebar, h2.pagetitle {padding-top:40px;}
 #sidebar h2 {color:#666;margin:0 0 6px 0;padding: 0}
 .post h2 {font-size: 24px;text-align: left; color:#000}
 h2.pagetitle {color:#333;margin:0;padding-bottom:0;}
@@ -309,6 +331,6 @@ ol.commentlist li.thread-odd {}
 #view_everything{
     width: 100%;
     display: block;
-    text-align: right;
     font-size: 1.1em;
+    padding-left: 100px;
 }

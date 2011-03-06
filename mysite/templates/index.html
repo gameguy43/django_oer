@@ -2,6 +2,15 @@
 
 {% block main %}
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#ticker').list_ticker({
+    speed: 5000,
+    effect: 'fade',
+    })
+})
+</script>
+
 <div id="sidebar">
     Categories:
     <ul>
@@ -14,18 +23,23 @@
     {% endfor %}
         <li>
         <a href="/everything">
-        Everything ({{total_items}} items)
+        Everything 
         </a>
         </li>
     </ul>
 </div>
     <div class="homepage" id="content-twocol"> 
 
+<h1 style="margin-left: 100px;">
+Highlights:
+</h1>
 
+<ul id="ticker">
 {% for thing in things %}
 {% if not thing.hide %}
 
-<span class="front_page_item">
+
+<li class="front_page_item">
 <p class="title">
 <a href="/view/{{thing.pk}}">{{thing.title}}</a>
 </p>
@@ -48,6 +62,7 @@
 
 {% endif %}
 {% endfor %}
+</ul>
 
  
 <!--
@@ -60,7 +75,7 @@
  
 <p> 
 <a id="view_everything" href="/everything">
-        View Everything &raquo;
+        View all {{total_items}} resources &raquo;
 </a>
 </p>
 
