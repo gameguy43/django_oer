@@ -14,7 +14,7 @@
     {% endfor %}
         <li>
         <a href="/everything">
-        Everything
+        Everything ({{total_items}} items)
         </a>
         </li>
     </ul>
@@ -48,6 +48,7 @@
 
 {% endif %}
 {% endfor %}
+
  
 <!--
 <p class="big_homepage_links"> 
@@ -58,6 +59,9 @@
 -->
  
 <p> 
+<a id="view_everything" href="/everything">
+        View Everything &raquo;
+</a>
 </p>
 
 
